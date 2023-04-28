@@ -18,7 +18,7 @@ resource "google_compute_instance" "vm_instance" {
   cd /git && \
   git clone https://github.com/jota4i/data_env_gcp.git && \
   cd data_env_gcp && \
-  git checkout js/add-start-script && \
+  git checkout js/add-docker-airflow && \
   sudo chmod a+x config/infra/config.sh & \
   sudo config/infra/config.sh
   SCRIPT
