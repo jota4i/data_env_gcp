@@ -1,1 +1,2 @@
 config/infra/.terraform/terraform.tfstate
+*airflow/logs*
