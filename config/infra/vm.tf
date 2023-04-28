@@ -1,9 +1,6 @@
 resource "google_compute_instance" "vm_instance" {
   name         = "airflow-server"
   machine_type = "e2-micro"
-  project      = "airflow4i"
-  zone         = "us-west1-b"
-
 
   boot_disk {
     initialize_params {
