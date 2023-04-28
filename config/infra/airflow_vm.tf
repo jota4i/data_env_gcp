@@ -12,4 +12,5 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
     }
   }
+  metadata_startup_script = "sudo apt-get install -y git && mkdir /git && cd /git && git clone https://github.com/jota4i/airflow_use_case.git"
 }
