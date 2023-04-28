@@ -14,9 +14,7 @@ RUN apt-get update && \
   apt-get install -y \
   python3-distutils \
   python3-apt \
-  build-essential \
-  openjdk-17-jdk \
-  r-base
+  build-essential 
 
 WORKDIR /opt/
 
