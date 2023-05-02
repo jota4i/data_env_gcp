@@ -19,6 +19,6 @@ jobs:
         uses: patrickwyler/gcs-bucket-sync-action@1.3
         with:
           secrets: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-          bucket: 'dataflow_jose\sync'
+          bucket: 'dataflow_jose/sync'
           sync_dir: 'airflow'
           exclude: '.*\.md$|\.gitignore$|\.git/.*$|\.github/.*$'
