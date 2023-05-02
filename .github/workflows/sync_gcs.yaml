@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - main
-      - js/add-docker-airflow
+      - js/sync-gcs-with-gce
     paths:
     - 'airflow/**'
-
 
 jobs:
   deploy:

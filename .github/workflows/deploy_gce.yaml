@@ -43,3 +43,12 @@ jobs:
       run: terraform -chdir=config/infra apply -auto-approve
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+
+    - name: Send gcp credentials
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: airflow4i
+        credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        args: ['compute', 'scp', 'key.json', '[airflow-server]:/git/key.json']
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: /git/key.json
