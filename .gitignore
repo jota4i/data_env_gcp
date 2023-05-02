@@ -1,1 +1,4 @@
 config/infra/.terraform/terraform.tfstate
+*airflow/logs*
+*tfstate*
+*__pycache__*
