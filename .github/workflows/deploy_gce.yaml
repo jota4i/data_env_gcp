@@ -1,9 +1,10 @@
-name: 'Terraform CI'
+name: 'Deploy GCP resources'
 
 on:
   push:
     branches:
     - main
+    - js/sync-gcs-with-gce
     paths:
     - 'config/infra/**'
 

@@ -1,4 +1,4 @@
-name: Deploy
+name: Sync GCS
 
 on:
   push:
