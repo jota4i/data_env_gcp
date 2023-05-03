@@ -13,12 +13,8 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   metadata_startup_script = <<-SCRIPT
-  sudo apt-get install -y git && \
-  mkdir /git && \
-  cd /git && \
-  git clone https://github.com/jota4i/data_env_gcp.git && \
-  cd data_env_gcp && \
-  sudo chmod a+x config/infra/config.sh
+  gcloud auth activate-service-account --key-file=/git/gcp_key.json && \
+  echo "sudo gsutil rsync -r gs://dataflow_jose /git/gce" >> /git/sync.sh 
   SCRIPT
 
 }

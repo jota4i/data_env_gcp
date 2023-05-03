@@ -49,6 +49,6 @@ jobs:
       with:
         project_id: airflow4i
         credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-        args: ['compute', 'scp', 'key.json', '[airflow-server]:/git/key.json']
+        args: ['compute', 'scp', 'key.json', '[airflow-server]:/git/gcp_key.json']
       env:
-        GOOGLE_APPLICATION_CREDENTIALS: /git/key.json
+        GOOGLE_APPLICATION_CREDENTIALS: /git/gcp_key.json
