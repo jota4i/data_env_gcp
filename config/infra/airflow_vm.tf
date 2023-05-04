@@ -21,8 +21,4 @@ resource "google_compute_instance" "vm_instance" {
   echo "*/5 * * * * sudo gsutil rsync -r gs://dataflow_jose /git/gce" | crontab -
   SCRIPT
 
-  metadata = {
-    "TF_VAR_project_id" = var.GOOGLE_APPLICATION_CREDENTIALS
-  }
-
 }
