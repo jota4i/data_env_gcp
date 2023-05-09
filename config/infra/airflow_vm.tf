@@ -19,7 +19,6 @@ resource "google_compute_instance" "vm_instance" {
   gsutil rsync -r gs://dataflow_jose /git/gce && \
   echo "sudo gsutil rsync -r gs://dataflow_jose /git/gce" >> /git/sync.sh && \
   echo "*/5 * * * * sudo gsutil rsync -r gs://dataflow_jose /git/gce" | crontab -
-  echo "teste"
   SCRIPT
 
 }
