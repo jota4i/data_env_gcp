@@ -11,7 +11,4 @@ variable "zone" {
   type = string
 }
 
-variable "gcp_sa_key" {
-  type        = string
-}
 
